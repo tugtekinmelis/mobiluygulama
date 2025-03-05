@@ -1,0 +1,7 @@
+ String selam = " Merhaba ";
+        Scanner oku = new Scanner(System.in);
+        System.out.print("Adınız:");
+        String ad = oku.next();
+        System.out.print("Yaşınız:");
+        int yas = oku.nextInt();
+        System.out.println(selam + ad + "Yaşın:"+yas);

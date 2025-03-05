@@ -1,0 +1,8 @@
+   Scanner oku= new Scanner(System.in);
+        System.out.println("kısa kenar:");
+        int kisa = oku.nextInt();
+        System.out.println("uzun kenar:");
+        int uzun = oku.nextInt();
+        int alan=kisa*uzun;
+        System.out.println("Alan"+alan);
+

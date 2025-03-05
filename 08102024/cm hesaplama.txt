@@ -1,0 +1,4 @@
+   Scanner oku=new Scanner(System.in);
+        System.out.print("cm değerini giriniz");
+        float cm=oku.nextFloat();
+        System.out.println("cm"+cm*2.54 );
