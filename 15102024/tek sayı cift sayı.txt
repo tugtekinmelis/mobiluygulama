@@ -1,0 +1,15 @@
+   public static void main(String[] args) {
+        int sayi;
+        Scanner snc = new Scanner(System.in);
+        System.out.println("Bir sayı giriniz:");
+        sayi =snc.nextInt();
+        if(sayi%2==0)
+        {
+            System.out.println("Çift sayı girişi yaptınız..");
+        }
+        else
+        {
+            System.out.println("Tek sayı girişi yaptınız..");
+        }
+        System.out.println("Program bitti");
+    }
