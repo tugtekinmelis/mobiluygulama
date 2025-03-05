@@ -1,0 +1,42 @@
+public class MainActivity extends AppCompatActivity {
+    EditText etDersAdi,etN1,etN2,etP1,etP2;
+    Button btn;
+    ListView lvDersler;
+    ArrayList<String> dersListesi;
+    ArrayAdapter<String> adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+        etDersAdi = findViewById(R.id.editTextText_dersadi);
+        etN1 = findViewById(R.id.editTextText_n1);
+        etN2 = findViewById(R.id.editTextText_n2);
+        etP1 = findViewById(R.id.editTextText_p1);
+        etP2 = findViewById(R.id.editTextText_p2);
+        lvDersler = findViewById(R.id.ListView_dersListesi);
+        btn = findViewById(R.id.button_btn);
+        dersListesi = new ArrayList<String>();
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,dersListesi);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Ders d = new Ders();
+                d.setAd(etDersAdi.getText().toString());
+                d.setN1(Integer.parseInt(etN1.getText().toString()));
+                d.setN2(Integer.parseInt(etN2.getText().toString()));
+                d.setP1(Integer.parseInt(etP1.getText().toString()));
+                d.setP2(Integer.parseInt(etP2.getText().toString()));
+                dersListesi.add(d.toString());
+                lvDersler.setAdapter(adapter);
+            }
+        });
+
+    }
+}
