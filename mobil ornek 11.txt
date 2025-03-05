@@ -1,0 +1,9 @@
+        Scanner oku=new Scanner(System.in);
+        int sayi,toplam=0;
+        System.out.print("Bir Sayı Giriniz:");
+        sayi= oku.nextInt();
+
+        for(int i=1;i<sayi;i++){
+            toplam+=i;
+        }
+        System.out.print("Toplam: "+toplam);

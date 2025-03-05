@@ -1,0 +1,10 @@
+      Scanner scn = new Scanner(System.in);
+        System.out.print("Bir sayı girin: ");
+        int sayi = scn.nextInt();
+        int toplam = 0;
+
+        for (int i = 1; i <= sayi; i++) {
+            toplam += i;
+        }
+
+        System.out.println("Toplam: " + toplam);
