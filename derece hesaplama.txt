@@ -1,0 +1,17 @@
+   public static void main(String[] args) {
+        double derece;
+        Scanner snc = new Scanner(System.in);
+        System.out.println("Bir derece giriniz");
+        derece =snc.nextDouble();
+        if (derece <= 0)
+        {
+            System.out.println("katı");
+        }
+        else if (derece > 0 && derece < 100)
+        {
+            System.out.println("sıvı");
+        }
+        else
+        {
+            System.out.println("gaz");
+        }
