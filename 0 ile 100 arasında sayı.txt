@@ -1,0 +1,20 @@
+   public static void main(String[] args) {
+        Scanner snc = new Scanner(System.in);
+        System.out.print("Bir sayı girin (0-100): ");
+        int sayi = snc.nextInt();
+        if (sayi >= 0 && sayi <= 24) {
+            System.out.println("Sonuç: 0");
+        } else if (sayi >= 25 && sayi <= 44) {
+            System.out.println("Sonuç: 1");
+        } else if (sayi >= 45 && sayi <= 54) {
+            System.out.println("Sonuç: 2");
+        } else if (sayi >= 55 && sayi <= 69) {
+            System.out.println("Sonuç: 3");
+        } else if (sayi >= 70 && sayi <= 84) {
+            System.out.println("Sonuç: 4");
+        } else if (sayi >= 85 && sayi <= 100) {
+            System.out.println("Sonuç: 5");
+        } else {
+            System.out.println("Lütfen 0 ile 100 arasında bir sayı girin.");
+        }
+    }
